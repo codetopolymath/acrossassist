@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import PolicyView from './components/PolicyView';
 import PlanBenefits from './components/PlanBenefits';
+import PolicyHistory from './components/PolicyHistory';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/policy-view" element={<PolicyView />} />
         <Route path="/plan-benefits" element={<PlanBenefits />} />
+        <Route path="/policy-history" element={<PolicyHistory />} />
       </Routes>
     </Router>
   );

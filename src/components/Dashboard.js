@@ -20,7 +20,7 @@ const Dashboard = () => {
             {isSidebarOpen ? 'Close' : 'Open'} Sidebar
           </button> */}
           <div className="user-icon">
-            <img src="https://aacrm.thorintech.com/assets/images/avatars/avatar_default.jpg" alt="User Icon" />
+            <img style={{width: '40px', height: '40px', border: '50%'}} src="https://aacrm.thorintech.com/assets/images/avatars/avatar_default.jpg" alt="User Icon" />
           </div>
         </header>
         <h1>Hi, Welcome back</h1>

@@ -2,8 +2,13 @@ import React from 'react';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, Box } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import HistoryIcon from '@mui/icons-material/History';
+// Step 1: Import useNavigate
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = ({ isOpen }) => {
+  // Step 2: Initialize navigate
+  const navigate = useNavigate();
+
   return (
     <Drawer
       variant="persistent"
@@ -26,13 +31,13 @@ const Sidebar = ({ isOpen }) => {
           <img src="https://www.acrossassist.com/images/acrossassist/aa_logo_horizontal_small.png" alt="Across Assist Logo" style={{ width: '100%' }} />
         </Box>
         <List>
-          <ListItem button>
+          <ListItem button onClick={() => navigate('/dashboard')}>
             <ListItemIcon>
               <DashboardIcon />
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
           </ListItem>
-          <ListItem button>
+          <ListItem button onClick={() => navigate('/policy-history')}>
             <ListItemIcon>
               <HistoryIcon />
             </ListItemIcon>
