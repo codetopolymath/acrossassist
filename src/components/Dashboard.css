@@ -1,0 +1,93 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+  
+  .sidebar-closed {
+    margin-left: 60px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-toggle {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sidebar-toggle:hover {
+    background-color: #0056b3;
+  }
+  
+  .user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .insurance-options {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .insurance-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .insurance-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .insurance-card .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .insurance-card.health {
+    background-color: #e6f7ff;
+  }
+  
+  .insurance-card.travel {
+    background-color: #f0f5ff;
+  }
+  
+  .insurance-card.life {
+    background-color: #fffbe6;
+  }
+  
+  .insurance-card.auto {
+    background-color: #fff1f0;
+  }
+  
+  .insurance-card .label {
+    font-size: 18px;
+    color: #333;
+  }
