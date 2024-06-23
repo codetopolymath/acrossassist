@@ -23,7 +23,7 @@ const Dashboard = () => {
             <img style={{width: '40px', height: '40px', border: '50%'}} src="https://aacrm.thorintech.com/assets/images/avatars/avatar_default.jpg" alt="User Icon" />
           </div>
         </header>
-        <h1>Hi, Welcome back</h1>
+        <h1>Hi, Welcome back Sameer</h1>
         <div className="insurance-options">
           <div className="insurance-card health">
             <div className="icon">❤️</div>
