@@ -20,26 +20,26 @@ const Login = () => {
       <div className="login-left">
         {/* <img src="logo.png" alt="Across Assist Logo" className="logo" /> */}
         <h1>Hi, Welcome Back, <strong>Customer</strong></h1>
-        <img src="https://www.acrossassist.com/images/acrossassist/aa_logo_horizontal_small.png" alt="Across Assist Text" className="logo-text" />
+        <img src="https://cipherwingsolution.com/assets/img/logo.svg" alt="Across Assist Text" className="logo-text" />
       </div>
       <div className="login-right">
         <form onSubmit={handleSubmit} className="login-form">
           <h2>Sign in to InsuranceCRM</h2>
           <input 
             type="text" 
-            placeholder="Policy No" 
+            placeholder="📇 Policy No" 
             value={policyNo} 
             onChange={(e) => setPolicyNo(e.target.value)} 
           />
           <input 
             type="text" 
-            placeholder="Passport No" 
+            placeholder="🪪 Passport No" 
             value={passportNo} 
             onChange={(e) => setPassportNo(e.target.value)} 
           />
           <input 
             type="text" 
-            placeholder="Mobile" 
+            placeholder="☎️ Mobile" 
             value={mobile} 
             onChange={(e) => setMobile(e.target.value)} 
           />
