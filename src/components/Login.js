@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import './Login.css'; // Assuming you will add your styles in Login.css
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [policyNo, setPolicyNo] = useState('');
   const [passportNo, setPassportNo] = useState('');
   const [mobile, setMobile] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle the login logic here
+    navigate('/dashboard');
     console.log('Logging in with:', { policyNo, passportNo, mobile });
   };
 
