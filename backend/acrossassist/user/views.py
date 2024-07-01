@@ -8,6 +8,8 @@ from user.models import User
 from user.serializers import (OTPSerializer, OTPVerificationSerializer,
                               PasswordSerializer, UserSerializer)
 
+from user.SMSService import SMSManager
+
 User = get_user_model()
 
 def get_contact_type(phone_email):
@@ -75,6 +77,14 @@ class OTPGenerateView(generics.GenericAPIView):
 
         # Send the OTP to the user via SMS or Email (implementation not shown)
         print(f'OTP: {otp}')  # Logging the OTP for demonstration purposes
+
+        try:
+            # Send the OTP to the user via SMS
+            sms_manager = SMSManager()
+            message = f"Dear Customer, For login to Across Assist portal, please use OTP @__{otp}__@ to validate - Across Assist;"
+            sms_manager.send_sms(phone_email, message)
+        except Exception as e:
+            return Response({'error': 'Failed to send OTP'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return Response({'message': 'OTP sent successfully'}, status=status.HTTP_200_OK)
 

@@ -3,6 +3,10 @@ from django.conf import settings
 import uuid
 from policy_manager.models import PurchasedPolicy
 
+def user_directory_path(instance, filename):
+    # File will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    return f'supporting_documents/user_{instance.user.id}/{filename}'
+
 class Claim(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     #claim_id = models.CharField(max_length=20, unique=True) # can be used to generate a unique claim id
@@ -29,7 +33,7 @@ class Claim(models.Model):
     # Updates and Notes (for internal use) on the claim ::: supporting document [filled & uploaded by insurer]
     notes = models.TextField(blank=True, null=True)
     updates = models.TextField(blank=True, null=True)
-    supporting_documents = models.FileField(upload_to='supporting_documents/', null=True, blank=True)
+    supporting_documents = models.FileField(upload_to=user_directory_path, null=True, blank=True)
 
     # Claim status and tracking
     status = models.CharField(max_length=20, choices=[
